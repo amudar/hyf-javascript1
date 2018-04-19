@@ -12,3 +12,4 @@ const hello = 'Hello world!'
 const part = hello.slice(0, 5);
 const upper = hello.toUpperCase();
 console.log(part, upper);
+
