@@ -9,7 +9,7 @@ console.log(b);
 console.log(c);
 console.log(d);
 let foo =3;
-console.log('The value of my variable foo is: ' + foo);
+console.log('The value of my variable foo is:' + foo);
 console.log('a is a number, b is a string, c and d are booleans!');
 console.log(typeof a);
 console.log(typeof b);
