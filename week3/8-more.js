@@ -1,12 +1,28 @@
 'use strict';
 
 function advertisement(vehicleNames) {
-    const result = 'Amazing Joe\'s Garage, we service ' + vehicles[0] + 's, ' + vehicles[1] + 's, '
-        + vehicles[2] + 's and ' + vehicles[3] + 's.';
-    return result;
+
+    let ourService = '';
+
+    //const index = 0;
+
+    for (let i = 0; i < vehicleNames.length; i++) {
+
+        const vehicleName = vehicleNames[i];
+        const pluralForm = vehicleName + 's';
+
+        if (i === vehicleNames.length - 1) {
+            ourService += 'and ' + pluralForm;
+        }
+        else {
+            ourService += pluralForm + ', ';
+        }
+    }
+
+    console.log('Welcome to Amazing Joe\'s Garage, we service ' + ourService);
 }
 
-const vehicles = ['car', 'motorbike', 'caravan', 'bike'];
+const vehicles = ['car', 'motorbike', 'caravan', 'bike', 'boat'];
 
-const text = advertisement(vehicles);
-console.log(text);
+advertisement(vehicles);
+

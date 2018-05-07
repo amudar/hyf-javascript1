@@ -1,9 +1,14 @@
 'use strict';
 
 function printObject(obj) {
-    console.log('firstName = ' + obj.firstName + '\n'
-        + 'lastName = ' + obj.lastName + '\n'
-        + 'city = ' + obj.city);
+    for (const prop in obj) {
+        if (typeof obj[prop] === "object") {
+            printObject(obj[prop]);
+        }
+        else {
+            console.log(prop + ': ' + obj[prop]);
+        }
+    }
 }
 
 const person = {
